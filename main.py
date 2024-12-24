@@ -15,7 +15,6 @@ bot = Bot(token=TOKEN)
 dp = Dispatcher(storage=MemoryStorage())
 
 
-
 async def main():
     dp.include_router(router)
     logging.info("Бот запущен!")

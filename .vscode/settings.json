@@ -1,19 +1,15 @@
 {
     "git.autoRepositoryDetection": "subFolders",
     "breadcrumbs.enabled": true,
-
     "python.languageServer": "Pylance",
     "python.analysis.typeCheckingMode": "off",
     "python.analysis.diagnosticMode": "openFilesOnly",
     "python.analysis.autoSearchPaths": true,
     "python.analysis.autoImportCompletions": true,
     "python.analysis.completeFunctionParens": true,
-
     //иногда надо будет менять
     "python.analysis.inlayHints.variableTypes": false,
     "python.analysis.inlayHints.functionReturnTypes": false,
-
-
     "python.analysis.importFormat": "absolute",
     "python.analysis.enablePytestSupport": true,
     "python.analysis.indexing": true,
@@ -24,9 +20,8 @@
             "includeAllSymbols": true
         }
     ],
-      
     "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter"
+        "editor.defaultFormatter": "charliermarsh.ruff"
     },
     "emmet.includeLanguages": {
         "django-html": "html"
@@ -42,5 +37,4 @@
         "cms",
         "wagtail"
     ],
-
 }

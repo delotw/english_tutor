@@ -1,1 +1,1 @@
-kakaya-to informaciya
+poka nikakoi infi net, prosto razrabotka huini
