@@ -1,6 +1,7 @@
 from aiogram import F, Router, types
 from aiogram.enums import ParseMode
-from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, KeyboardButton, ReplyKeyboardMarkup
+from db.db_functions import get_random_task, create_paste_user_id
 
 # Заготовка кода, не более
 # user_id = message.from_user.id
@@ -17,25 +18,43 @@ router = Router()
 
 # Привественное сообщение и получение данных о пользователе
 # ------------------------------------
-
-
-# Стартовый запрос для появления сообщения бота
-# ------------------------------------
-@router.message(F.text == "/start")
+@router.message(F.text == '/start')
 async def send_welcome(message: types.Message) -> None:
     first_name = message.from_user.first_name
-
-    kb = InlineKeyboardMarkup(
-        inline_keyboard=[
-            [InlineKeyboardButton(text="Подготовка", callback_data="preparation")],
-            [InlineKeyboardButton(text="Личный кабинет", callback_data="user_cabinet")],
-            [InlineKeyboardButton(text="Поддержка", callback_data="support")],
-        ]
+    tg_id = message.from_user.id
+    text = (f'<b>Привет, {first_name} </b>👋\n'
+            f'Меня зовут <b>Тьютор</b> и я помогу тебе подготовиться к ЕГЭ по английскому!\n'
+            f'Но сначала выбери, в каком классе ты учишься:')
+    kb = ReplyKeyboardMarkup(
+        keyboard=[[KeyboardButton(text='Прогуливаюсь мимо'), KeyboardButton(text='10'), KeyboardButton(text='11')]]
     )
-    text = f"<b>Привет, {first_name} </b>👋\nВыбери интересующий тебя раздел:"
+    create_paste_user_id(tg_id, first_name)
 
     await message.answer(text=text, reply_markup=kb, parse_mode=p_html)
 
+
+@router.message(F.text in ['10', '11', 'Прогуливаюсь мимо'])
+async def paste_class(message: types.Message):
+    grade = message.text
+    
+
+# Стартовый запрос для появления сообщения бота
+# ------------------------------------
+# @router.message(F.text == "/start")
+# async def send_welcome(message: types.Message) -> None:
+#     first_name = message.from_user.first_name
+#
+#     kb = InlineKeyboardMarkup(
+#         inline_keyboard=[
+#             [InlineKeyboardButton(text="Подготовка", callback_data="preparation")],
+#             [InlineKeyboardButton(text="Личный кабинет", callback_data="user_cabinet")],
+#             [InlineKeyboardButton(text="Поддержка", callback_data="support")],
+#         ]
+#     )
+#     text = f"<b>Привет, {first_name} </b>👋\nВыбери интересующий тебя раздел:"
+#
+#     await message.answer(text=text, reply_markup=kb, parse_mode=p_html)
+#
 
 # Возвращение в главное меню
 # ------------------------------------
@@ -258,6 +277,24 @@ async def random_variant(callback: types.CallbackQuery) -> None:
 
     await callback.message.edit_text(text=text, reply_markup=kb, parse_mode=p_html)
     await callback.answer()
+
+
+# ! Вариант того, как можно вытаскивать задания из бд и отправлять их пользователю
+# @router.callback_query(F.data == "variant_random")
+# async def random_variant(callback: types.CallbackQuery) -> None:
+#     kb = InlineKeyboardMarkup(
+#         inline_keyboard=[
+#             [InlineKeyboardButton(text="Назад", callback_data="choose_exam_variants")]
+#         ]
+#     )
+#     task = get_random_task(10)
+#     id, desc, ans = task[1], task[2], task[3]
+#     text = (f'Так, ну вот твое задание {id}:\n'
+#             f'{desc}\n'
+#             f'<span class="tg-spoiler">{ans}</span>')
+#
+#     await callback.message.edit_text(text=text, reply_markup=kb, parse_mode=p_html)
+#     await callback.answer()
 
 
 # ? Заглушка на аудирование
