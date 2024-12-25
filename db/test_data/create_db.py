@@ -1,6 +1,6 @@
 import sqlite3
 
-db = sqlite3.connect('../english_tutor.db')
+db = sqlite3.connect('./english_tutor.db')
 c = db.cursor()
 
 # создание таблицы пользователей

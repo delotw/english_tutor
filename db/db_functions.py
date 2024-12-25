@@ -20,32 +20,47 @@ def get_random_task(kim_id: int) -> list:
     return result_list
 
 
-# ? Функция для записи данных и пользователе в базу данных
+# ? Функция записи uid и имени пользователя в БД
 # ------------
-def create_paste_user_id(tg_id: int, name: str) -> None:
+def create_user(tg_id: int, name: str) -> None:
     # * проверка существувет ли пользователь
     cur.execute('''SELECT * FROM users WHERE tg_id = ?''', (tg_id,))
     user_check = cur.fetchone()
-
+    # * выход из функции при наличии записи с данными пользователя
     if user_check:
         return
 
-    try:
-        cur.execute('''
-        INSERT INTO users (tg_id, name) VALUES (?, ?)''', (tg_id, name,))
-        db.commit()
-        print(f'Пользователь с ID {tg_id} по имени {name} был добавлен в базу данных')
-    except Exception as err:
-        print(f'Не вышло добавить пользователя из-за {err}')
+    cur.execute('''
+    INSERT INTO users (tg_id, name) VALUES (?, ?)''', (tg_id, name,))
+    db.commit()
+    print(f'Пользователь с ID {tg_id} по имени {name} был добавлен в базу данных')
 
 
-def paste_user_class(tg_id: int, grade: int) -> None:
+# ? Функция записи данных о классе пользователя в БД
+# -----------
+def paste_grade(tg_id: int, grade: int) -> None:
+    cur.execute('''
+    UPDATE users 
+    SET class = ?
+    WHERE tg_id = ?''', (grade, tg_id))
+    db.commit()
+    print(f'Пользователю с ID {tg_id} был присвоен {grade} класс')
+
+
+# ? Функция-геттер данных о пользователе
+# ----------
+def get_userinfo(tg_id: int) -> list:
+    cur.execute('''
+    SELECT * FROM users 
+    WHERE tg_id = ?''', (tg_id,))
+    user_info = list(cur.fetchone())
+
+    return user_info
+
+
+def calc_percentage(right: int, solved: int) -> int:
     try:
-        cur.execute('''
-        UPDATE users 
-        SET class = ?
-        WHERE tg_id = ?''', (grade, tg_id))
-        db.commit()
-        print(f'Пользователю с ID {tg_id} был присвоен {grade} класс')
-    except Exception as err:
-        print(f'Не вышло присвоить класс пользователю из-за {err}')
+        temp = right * 100 // solved
+        return temp
+    except ZeroDivisionError:
+        return 0
