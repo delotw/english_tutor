@@ -4,7 +4,8 @@ from aiogram import types
 start = ReplyKeyboardMarkup(
     keyboard=[[KeyboardButton(text='Прогуливаюсь мимо 🚶'), KeyboardButton(text='10'), KeyboardButton(text='11')]],
     resize_keyboard=True,
-    one_time_keyboard=True
+    one_time_keyboard=True,
+    input_field_placeholder='Выбери класс, в котором сейчас учишься:'
 )
 
 agree_to_start = InlineKeyboardMarkup(
@@ -15,11 +16,7 @@ main_menu = InlineKeyboardMarkup(
     inline_keyboard=[
         [InlineKeyboardButton(text="Подготовка", callback_data="preparation")],
         [InlineKeyboardButton(text="Личный кабинет", callback_data="user_cabinet")],
-        [
-            InlineKeyboardButton(
-                text="Техническая поддержка", callback_data="support"
-            )
-        ],
+        [InlineKeyboardButton(text="Техническая поддержка", callback_data="support")],
     ]
 )
 
