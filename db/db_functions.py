@@ -1,5 +1,5 @@
 import sqlite3
-from configuration import DB_PATH
+from settings import DB_PATH
 
 db = sqlite3.connect(DB_PATH)
 cur = db.cursor()
@@ -58,6 +58,7 @@ def get_userinfo(tg_id: int) -> list:
     return user_info
 
 
+# Для подсчета процента верно выполненных заданий
 def calc_percentage(right: int, solved: int) -> int:
     try:
         temp = right * 100 // solved

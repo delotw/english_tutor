@@ -4,8 +4,8 @@ import logging
 from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.memory import MemoryStorage
 
-from configuration import TOKEN
-from handlers import router
+from settings import TOKEN
+from app.modules.handlers import router
 
 # Логирование
 logging.basicConfig(level=logging.INFO)
