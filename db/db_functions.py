@@ -1,5 +1,5 @@
 import sqlite3
-from settings import DB_PATH
+from paths import DB_PATH
 
 db = sqlite3.connect(DB_PATH)
 cur = db.cursor()
@@ -33,7 +33,8 @@ def create_user(tg_id: int, name: str) -> None:
     cur.execute('''
     INSERT INTO users (tg_id, name) VALUES (?, ?)''', (tg_id, name,))
     db.commit()
-    print(f'Пользователь с ID {tg_id} по имени {name} был добавлен в базу данных')
+    print(f'Пользователь с ID {tg_id} по имени {
+          name} был добавлен в базу данных')
 
 
 # ? Функция записи данных о классе пользователя в БД

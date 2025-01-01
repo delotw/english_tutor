@@ -1,7 +1,7 @@
 from aiogram import F, Router, types
 from aiogram.enums import ParseMode
 from db.db_functions import *
-import keyboard as kb
+from app.modules import keyboards as kb
 
 # Переменные
 # ------------------------------------
@@ -42,7 +42,8 @@ async def paste_class(message: types.Message) -> None:
 @router.callback_query(F.data == "main_menu")
 async def back_to_main_menu(callback: types.CallbackQuery) -> None:
     text = (
-        f"<b>Привет, {callback.from_user.first_name} 👋</b> \nВыбери интересующий тебя раздел ниже:"
+        f"<b>Привет, {
+        callback.from_user.first_name} 👋</b> \nВыбери интересующий тебя раздел ниже:"
     )
     await callback.message.edit_text(text=text, reply_markup=kb.main_menu, parse_mode=p_html)
     await callback.answer()
@@ -65,7 +66,8 @@ async def menu_preparation(callback: types.CallbackQuery) -> None:
 async def menu_user_profile(callback: types.CallbackQuery) -> None:
     tg_id = callback.from_user.id
     user_info = get_userinfo(tg_id=tg_id)
-    name, grade, task_solved, task_solved_right = user_info[1], user_info[3], user_info[4], user_info[5]
+    name, grade, task_solved, task_solved_right = user_info[
+        1], user_info[3], user_info[4], user_info[5]
     temp = calc_percentage(right=task_solved_right, solved=task_solved)
     text = (
         f'<b>Имя:</b> {name}\n'

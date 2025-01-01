@@ -1,4 +1,4 @@
-#!/Users/nick/pypojects/egegarem/.venv/bin/python3.12
+#!/Users/nick/python/egegarem/.venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
