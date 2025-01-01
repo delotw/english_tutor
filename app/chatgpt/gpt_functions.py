@@ -1,5 +1,4 @@
-from openai import OpenAI
-import asyncio
+from openai import AsyncOpenAI
 
 
 # ?Функция для получения контекста-методички, чтобы gpt мог оценивать письма
@@ -14,7 +13,7 @@ def get_context(path: str) -> str:
 # ?Функция получения ответа от GPT
 async def get_score(api: str, context_path: str, mail_text: str) -> str:
     context = get_context(context_path)
-    client = OpenAI(api_key=api)
+    client = AsyncOpenAI(api_key=api)
     response = await client.chat.completions.create(
         model='o1-mini',
         messages=[
