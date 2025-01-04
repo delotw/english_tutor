@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="58613935-e00e-4f88-bba9-11a78351410c" name="Changes" comment="start to integrate chatgpt in project and mini refactor architecture" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
+    {
+      &quot;state&quot;: &quot;OPEN&quot;
+    }
+  ],
+  &quot;lastFilter&quot;: {}
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:delotw/engligh_tutor.git&quot;,
+    &quot;accountId&quot;: &quot;965c5acb-85f2-48b7-a882-a2c3fc99497a&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;delotw&quot;,
+    &quot;repository&quot;: &quot;engligh_tutor&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2qerU7NVWrebZ2QPplokY5dOD7G" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.chatgpt.executor&quot;: &quot;Run&quot;,
+    &quot;Python.create_db.executor&quot;: &quot;Run&quot;,
+    &quot;Python.db_functions.executor&quot;: &quot;Run&quot;,
+    &quot;Python.generate_test_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.handlers.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.start.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;db__develop&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/nick/python/egegarem/chatgpt&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/chatgpt" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/modules" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/chatgpt" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/db/test_data" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="58613935-e00e-4f88-bba9-11a78351410c" name="Changes" comment="" />
+      <created>1735033895149</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1735033895149</updated>
+    </task>
+    <task id="LOCAL-00001" summary="add empty message for unreleased functional">
+      <option name="closed" value="true" />
+      <created>1735034200891</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1735034200891</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add empty message for unreleased functional">
+      <option name="closed" value="true" />
+      <created>1735034385255</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1735034385255</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add empty message for unreleased functional">
+      <option name="closed" value="true" />
+      <created>1735065506791</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1735065506791</updated>
+    </task>
+    <task id="LOCAL-00004" summary="keyboards in separate file, edit message text to tuple, add first time user registration to data base">
+      <option name="closed" value="true" />
+      <created>1735154954339</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1735154954339</updated>
+    </task>
+    <task id="LOCAL-00005" summary="mini fix in first user registration">
+      <option name="closed" value="true" />
+      <created>1735155332019</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1735155332019</updated>
+    </task>
+    <task id="LOCAL-00006" summary="mini fix in first user registration">
+      <option name="closed" value="true" />
+      <created>1735156840398</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1735156840398</updated>
+    </task>
+    <task id="LOCAL-00007" summary="start to integrate chatgpt in project and mini refactor architecture">
+      <option name="closed" value="true" />
+      <created>1735493031044</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1735493031044</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add empty message for unreleased functional" />
+    <MESSAGE value="keyboards in separate file, edit message text to tuple, add first time user registration to data base" />
+    <MESSAGE value="mini fix in first user registration" />
+    <MESSAGE value="start to integrate chatgpt in project and mini refactor architecture" />
+    <option name="LAST_COMMIT_MESSAGE" value="start to integrate chatgpt in project and mini refactor architecture" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/modules/handlers.py</url>
+          <line>184</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
