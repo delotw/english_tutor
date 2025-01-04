@@ -87,7 +87,7 @@ back_to_template_tasks = InlineKeyboardMarkup(
     ]
 )
 
-choice_task_to_check_by_ai = InlineKeyboardMarkup(
+ = InlineKeyboardMarkup(
     inline_keyboard=[
         [InlineKeyboardButton(text='37', callback_data='choice_37_ai'),
          InlineKeyboardButton(text='38', callback_data='choice_38_ai')]
